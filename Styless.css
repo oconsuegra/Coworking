@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  color: white;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(56, 55, 55);
+  padding: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  gap: 55px;
+}
+button {
+  background-color: black;
+  cursor: pointer;
+  border: none;
+  padding: 16px 32px;
+  font-size: 15px;
+  
+  position: relative;
+  border-radius: 12px;
+ }
+ .Boton::before { /* Es usado normalmente para añadir contenido estético*/
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /*se utiliza para ordenar los elementos que se superpongan entre sí.*/
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, red,blue,deeppink,blue,red,blue,deeppink,blue,yellow,orange, green,green,green);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(80px);
+  animation: glowing 20s linear infinite;
+ }
+ @keyframes glowing{  /*permite construir animaciones*/
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 400% 0;
+  }
+
+  100%{
+    background-position: 0 0;
+  }
+
+ }
+
+main {
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(./Img/wholecontract_mobiliario_sillas_mesas_armarios_coworking-4.jpg);/*consiste en una transición progresiva entre dos o más colores a lo largo de una línea recta*/
+  background-position: center;
+  padding: 200px;
+  
+}
+.Texto {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  flex-direction: column;
+  color: white;
+}
+.Primario {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 100px 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.Imagenes{
+  display: grid;
+  grid-template-columns: repeat(4, 20pc) ;
+  place-items: center;
+  gap: 15px;
+}
+.img-normalizada:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.black {
+  color: black;
+}
+.Texsection {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  flex-direction: column;
+  color: black;
+  margin-bottom: 55px;
+}
+.img-normalizada {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 70px;
+}
+.Secundario{
+  background-size: cover;
+  background-image: url(./Oficinas/7.jpg);
+  background-position: center;
+  padding: 150px;
+  font-size: 2rem;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer{
+  background-color: rgb(56, 55, 55);
+  padding: 80px 0;
+}
+.footer-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-links{
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-links h4{
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  border-bottom: 2px solid #00c3ff;
+  padding-bottom: 10px; ;
+  display: inline-block;
+}
+.footer-links ul il a {
+ font-size:18px;
+ color: #BBBBBB;
+ display: block;
+ margin-bottom: 15px;
+ transition: all .3s ease;
+}
+.footer-links ul il a:hover{
+  color:#FFFFFF;
+  padding-left: 6px;
+
+}
+.social-link a {
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgba(255,255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+
+.social-link a:hover{
+  background-color: #00c3ff;
+
+}
+
+@media(max-width:991px){
+  .footer-row{
+    text-align: center;
+  }
+  .footer-links{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+html{
+  scroll-behavior:smooth;
+ 
+}
+html::-webkit-scrollbar {
+  background-color: #00c3ff;
+}
+
+html::-webkit-scrollbar:vertical {
+  width:10px;
+}
+html::-webkit-scrollbar-thumb{
+  background-color: black;
+  border-radius: 5px;
+}
